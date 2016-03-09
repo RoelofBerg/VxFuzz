@@ -1,0 +1,160 @@
+2016-03-08 13:32:42,878 - tPortmapd.fuzz - ERROR - Error occurred while fuzzing: AttributeError("'FuncThread' object has no attribute 'stop'",)
+2016-03-08 13:32:42,881 - tPortmapd.fuzz - ERROR - Traceback (most recent call last):
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 46, in _start
+    self._run_sequence(sequence)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 58, in _run_sequence
+    self._pre_test()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 248, in _pre_test
+    self.target.pre_test(self.model.current_index())
+  File "/home/yannick/workspace/projects/katnip/katnip/targets/tcp.py", line 49, in pre_test
+    super(TcpTarget, self).pre_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/server.py", line 62, in pre_test
+    super(ServerTarget, self).pre_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 80, in pre_test
+    self.controller.pre_test(test_number=self.test_number)
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/controller.py", line 127, in pre_test
+    if not self._is_running() or not self._is_target_alive():
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/controller.py", line 103, in _is_target_alive
+    sock.connect(self._target)
+  File "/usr/lib64/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 398, in _exit_now
+    self.stop()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 342, in stop
+    self.target.teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 71, in teardown
+    monitor.teardown()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 65, in teardown
+    super(VxWorksProcessMonitor, self).teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/monitors/base.py", line 55, in teardown
+    self.monitor_thread.stop()
+AttributeError: 'FuncThread' object has no attribute 'stop'
+
+2016-03-08 14:30:58,729 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 14:33:13,302 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 14:35:33,014 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 14:37:49,670 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 14:40:09,703 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 14:42:19,312 - tPortmapd.fuzz - ERROR - Error occurred while fuzzing: AttributeError("'NoneType' object has no attribute 'stop'",)
+2016-03-08 14:42:19,537 - tPortmapd.fuzz - ERROR - Traceback (most recent call last):
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 46, in _start
+    self._run_sequence(sequence)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 58, in _run_sequence
+    self._pre_test()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 248, in _pre_test
+    self.target.pre_test(self.model.current_index())
+  File "/home/yannick/workspace/projects/katnip/katnip/targets/tcp.py", line 49, in pre_test
+    super(TcpTarget, self).pre_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/server.py", line 62, in pre_test
+    super(ServerTarget, self).pre_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 80, in pre_test
+    self.controller.pre_test(test_number=self.test_number)
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/controller.py", line 127, in pre_test
+    """
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/controller.py", line 103, in _is_target_alive
+    sock.settimeout(0.1)
+  File "/usr/lib64/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 398, in _exit_now
+    self.stop()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 342, in stop
+    self.target.teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 71, in teardown
+    monitor.teardown()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 59, in teardown
+    """
+  File "/home/yannick/workspace/projects/kitty/kitty/monitors/base.py", line 55, in teardown
+    self.monitor_thread.stop()
+AttributeError: 'NoneType' object has no attribute 'stop'
+
+2016-03-08 14:49:44,397 - tPortmapd.fuzz - ERROR - Error occurred while fuzzing: AttributeError("'NoneType' object has no attribute 'info'",)
+2016-03-08 14:49:44,533 - tPortmapd.fuzz - ERROR - Traceback (most recent call last):
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 46, in _start
+    self._run_sequence(sequence)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 69, in _run_sequence
+    self._post_test()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 254, in _post_test
+    self.target.post_test(self.model.current_index())
+  File "/home/yannick/workspace/projects/katnip/katnip/targets/tcp.py", line 80, in post_test
+    super(TcpTarget, self).post_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/server.py", line 126, in post_test
+    super(ServerTarget, self).post_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 93, in post_test
+    monitor.post_test()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 45, in post_test
+    self.logger.info("Crash detected")
+AttributeError: 'NoneType' object has no attribute 'info'
+
+2016-03-08 14:53:19,885 - tPortmapd.fuzz - ERROR - Error occurred while fuzzing: AttributeError("'NoneType' object has no attribute 'stop'",)
+2016-03-08 14:53:19,960 - tPortmapd.fuzz - ERROR - Traceback (most recent call last):
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 46, in _start
+    self._run_sequence(sequence)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 69, in _run_sequence
+    self._post_test()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 254, in _post_test
+    self.target.post_test(self.model.current_index())
+  File "/home/yannick/workspace/projects/katnip/katnip/targets/tcp.py", line 80, in post_test
+    super(TcpTarget, self).post_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/server.py", line 126, in post_test
+    super(ServerTarget, self).post_test(test_num)
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 93, in post_test
+    monitor.post_test()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 43, in post_test
+    time.sleep(0.5)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 398, in _exit_now
+    self.stop()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 342, in stop
+    self.target.teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 71, in teardown
+    monitor.teardown()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 55, in teardown
+    super(VxWorksProcessMonitor, self).teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/monitors/base.py", line 55, in teardown
+    self.monitor_thread.stop()
+AttributeError: 'NoneType' object has no attribute 'stop'
+
+2016-03-08 14:54:42,883 - tPortmapd.fuzz - ERROR - Error occurred while fuzzing: AttributeError("'NoneType' object has no attribute 'stop'",)
+2016-03-08 14:54:42,934 - tPortmapd.fuzz - ERROR - Traceback (most recent call last):
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 46, in _start
+    self._run_sequence(sequence)
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/server.py", line 58, in _run_sequence
+    self._pre_test()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 249, in _pre_test
+    self._update_test_info()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 244, in _update_test_info
+    self.dataman.set_test_info(test_info)
+  File "/home/yannick/workspace/projects/kitty/kitty/data/data_manager.py", line 75, in wrapper
+    return task.get_results()
+  File "/home/yannick/workspace/projects/kitty/kitty/data/data_manager.py", line 65, in get_results
+    self._event.wait()
+  File "/usr/lib64/python2.7/threading.py", line 614, in wait
+    self.__cond.wait(timeout)
+  File "/usr/lib64/python2.7/threading.py", line 340, in wait
+    waiter.acquire()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 398, in _exit_now
+    self.stop()
+  File "/home/yannick/workspace/projects/kitty/kitty/fuzzers/base.py", line 342, in stop
+    self.target.teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/targets/base.py", line 71, in teardown
+    monitor.teardown()
+  File "/home/yannick/workspace/projects/VxWorks/Fuzzers/tPortmapd/monitor.py", line 55, in teardown
+    super(VxWorksProcessMonitor, self).teardown()
+  File "/home/yannick/workspace/projects/kitty/kitty/monitors/base.py", line 55, in teardown
+    self.monitor_thread.stop()
+AttributeError: 'NoneType' object has no attribute 'stop'
+
+2016-03-08 15:01:46,098 - tPortmapd.fuzz - WARNING - !!! Test 427 failed !!!
+2016-03-08 15:01:46,144 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 15:01:49,009 - tPortmapd.fuzz - ERROR - VM is not running or service is down
+2016-03-08 15:01:55,541 - tPortmapd.fuzz - WARNING - !!! Test 431 failed !!!
+2016-03-08 15:01:55,551 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 15:01:58,796 - tPortmapd.fuzz - ERROR - VM is not running or service is down
+2016-03-08 15:02:12,025 - tPortmapd.fuzz - WARNING - !!! Test 440 failed !!!
+2016-03-08 15:02:12,046 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 15:02:15,154 - tPortmapd.fuzz - ERROR - VM is not running or service is down
+2016-03-08 15:02:23,026 - tPortmapd.fuzz - WARNING - !!! Test 445 failed !!!
+2016-03-08 15:02:23,086 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 15:02:26,505 - tPortmapd.fuzz - ERROR - VM is not running or service is down
+2016-03-08 15:02:38,908 - tPortmapd.fuzz - WARNING - !!! Test 454 failed !!!
+2016-03-08 15:02:38,921 - tPortmapd.fuzz - ERROR - BaseFuzzer._post_test - failure detected
+2016-03-08 15:02:41,961 - tPortmapd.fuzz - ERROR - VM is not running or service is down
