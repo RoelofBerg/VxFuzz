@@ -1,4 +1,5 @@
 capstone==3.0.4
 -e git+git@github.com:yformaggio/katnip.git@f88b0264f8aecd1270d021d0718b7145677816a1#egg=katnip
--e git+git@github.com:yformaggio/kitty.git@c96d41786ed68520322c1afa9a23d22caee4f39d#egg=kittyfuzzer_remote
+kittyfuzzer==0.6.3
+kittyfuzzer-remote==0.6.3
 -e git+git@bitbucket.org:yformaggio/wdbdbg.git@d512078a1e045f396abce2b9b62d27d632d5e558#egg=WdbDBG
